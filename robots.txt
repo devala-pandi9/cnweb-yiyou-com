@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://devala-pandi9.github.io/cnweb-yiyou-com/sitemap.xml

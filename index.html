@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>易游体育 · 简明指南</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fafbfc;
+      color: #1a1e24;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 720px;
+      width: 100%;
+    }
+
+    /* 标题层级 */
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 550;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 1.75rem;
+      border-bottom: 1px solid #dce0e5;
+      padding-bottom: 0.75rem;
+      color: #0b1a2b;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 520;
+      margin: 2.5rem 0 0.8rem 0;
+      color: #1f2a38;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 510;
+      margin: 1.5rem 0 0.4rem 0;
+      color: #2c3a4a;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+      color: #2b3542;
+    }
+
+    /* 引导短句 —— hero 区域 */
+    .hero-tag {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #4a5a6e;
+      background: #eef1f5;
+      display: inline-block;
+      padding: 0.3rem 1.1rem;
+      border-radius: 30px;
+      letter-spacing: 0.01em;
+      margin-bottom: 1.8rem;
+    }
+
+    /* 承接卡片 / 特点列表 */
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 1.6rem 0 2rem 0;
+    }
+
+    .feature-item {
+      background: #ffffff;
+      border: 1px solid #e2e7ed;
+      border-radius: 16px;
+      padding: 1.2rem 1.4rem;
+      flex: 1 1 200px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+      transition: box-shadow 0.15s ease;
+    }
+
+    .feature-item:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .feature-item strong {
+      display: block;
+      font-weight: 540;
+      font-size: 1.05rem;
+      color: #0b1a2b;
+      margin-bottom: 0.25rem;
+    }
+
+    .feature-item span {
+      font-size: 0.95rem;
+      color: #4b5a6b;
+    }
+
+    /* 应用场景 —— 简洁卡片式 */
+    .scene-block {
+      background: #f7f9fc;
+      border-radius: 18px;
+      padding: 1.5rem 1.8rem;
+      margin: 1.8rem 0 2.2rem 0;
+      border-left: 4px solid #2a6f97;
+    }
+
+    .scene-block p {
+      margin-bottom: 0.5rem;
+    }
+
+    /* 提示 / FAQ 混合区域 */
+    .notice-box {
+      background: #ffffff;
+      border: 1px solid #e3e9f0;
+      border-radius: 18px;
+      padding: 1.5rem 1.8rem;
+      margin: 1.8rem 0;
+    }
+
+    .notice-box p {
+      margin-bottom: 0.6rem;
+    }
+
+    .faq-item {
+      margin-top: 1rem;
+      border-top: 1px dashed #d6dce5;
+      padding-top: 1rem;
+    }
+
+    .faq-item:first-of-type {
+      border-top: none;
+      margin-top: 0.5rem;
+      padding-top: 0;
+    }
+
+    .faq-q {
+      font-weight: 510;
+      color: #1d2b3c;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-a {
+      color: #3d4d60;
+      font-size: 0.95rem;
+    }
+
+    /* 链接风格 */
+    a {
+      color: #1f5f8a;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      font-weight: 470;
+      transition: border-color 0.1s;
+    }
+
+    a:hover {
+      border-bottom-color: #1f5f8a;
+    }
+
+    /* 结尾分隔 */
+    .closing-line {
+      margin-top: 2.8rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #dce0e5;
+      font-size: 0.95rem;
+      color: #5b6d7f;
+      text-align: left;
+    }
+
+    /* 响应式 */
+    @media (max-width: 520px) {
+      body {
+        padding: 1.2rem 1rem;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      .feature-item {
+        flex: 1 1 100%;
+      }
+      .scene-block, .notice-box {
+        padding: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- hero 开场短句 -->
+    <div class="hero-tag">体育 · 简明路径</div>
+
+    <h1>从起点了解易游体育</h1>
+
+    <!-- 承接段落 -->
+    <p>
+      不论你是初次接触线上体育服务，还是希望获得更清晰的访问指引，下面这份概述都将为你提供有条理的参考。<a href="https://cnweb-yiyou.com">易游体育</a>本身是一个整合型数字平台，其设计围绕“信息清晰、路径直观”展开，让关注体育内容的使用者能够快速定位自己需要的部分。
+    </p>
+    <p>
+      本指南聚焦于平台的结构逻辑、常见场景以及一些实用提醒。我们不堆砌术语，而是用平实的叙述帮助你建立整体的认知框架。
+    </p>
+
+    <!-- 特点列表 (三个维度) -->
+    <h2>平台特点摘要</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <strong>模块归拢</strong>
+        <span>内容按赛事、数据、资讯等划分，减少无关干扰。</span>
+      </div>
+      <div class="feature-item">
+        <strong>轻量交互</strong>
+        <span>页面布局直接，操作步骤清晰，不额外增加认知负担。</span>
+      </div>
+      <div class="feature-item">
+        <strong>持续更新</strong>
+        <span>信息流保持刷新，可作为日常体育信息的参考来源。</span>
+      </div>
+    </div>
+
+    <!-- 场景化叙述 -->
+    <h2>典型使用场景</h2>
+    <div class="scene-block">
+      <p><strong>· 赛前浏览</strong> — 快速查看即将进行的比赛与相关对阵，节省检索时间。</p>
+      <p><strong>· 数据查询</strong> — 需要某支队伍或联赛的历史数据时，可通过平台分类入口逐步定位。</p>
+      <p><strong>· 资讯跟随</strong> — 关注特定项目或运动员，利用聚合内容保持信息同步。</p>
+      <p style="margin-top:0.8rem; color:#3a4d62;">在每一次访问中，保持对信息来源的自主判断，是高效使用任何平台的前提。</p>
+    </div>
+
+    <!-- 温和提示 + FAQ 摘要 -->
+    <h2>访问提醒与常见疑问</h2>
+    <div class="notice-box">
+      <p><strong>▸ 访问前说明</strong><br>
+      使用任何线上服务前，建议先确认网络环境稳定，并留意平台域名是否准确。本文内提及的 <a href="https://cnweb-yiyou.com">易游体育</a> 是其主域名，访问时可直接在浏览器地址栏输入，避免通过第三方跳转。
+      </p>
+      <div class="faq-item">
+        <div class="faq-q">Q：是否需要注册才能浏览内容？</div>
+        <div class="faq-a">部分基础资讯与数据页面可直接访问，具体功能边界以平台实际展示为准。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q：移动端适配如何？</div>
+        <div class="faq-a">页面采用响应式设计，在手机与平板设备上可自动调整布局，操作区域适配触控。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q：信息更新频率大概怎样？</div>
+        <div class="faq-a">核心赛事期间内容更新较快；常规时段保持每日刷新，具体视内容类型而定。</div>
+      </div>
+      <p style="margin-top:1.2rem; font-size:0.95rem; color:#4a5b6d;">
+        以上摘要基于平台普遍特征，实际细节请直接在站点内体验。
+      </p>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="closing-line">
+      <p style="margin-bottom:0.3rem;">一份简明的指南，帮你降低摸索成本。</p>
+      <p style="margin-bottom:0;">体育信息的世界很宽，找到一个清晰的起点，比盲目浏览更加有效。</p>
+    </div>
+
+  </div>
+</body>
+</html>
